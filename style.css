@@ -1,0 +1,256 @@
+html, figure {
+	margin: 0;
+	padding: 0;
+}
+/*Styling the CSS Grid*/
+.grid {
+	display: grid;
+	grid-template-columns: 130px 1fr 1fr 130px;
+	grid-template-areas: 
+	". title title ."
+	". navigation navigation ."
+	". banner banner ."
+	". about about ."
+	". favorites favorites ."
+	". items items ."
+	"links links links links"
+	". footer footer .";
+}
+.title {
+	grid-area: title;
+}
+.navigation {
+	grid-area: navigation;
+	position: relative;
+}
+.banner {
+	grid-area: banner;
+}
+.about {
+	grid-area: about;
+}
+.favorites {
+	grid-area: favorites;
+}
+.items {
+	grid-area: items;
+}
+.links {
+	grid-area: links;
+	border-top: 1px solid #a3a3a3ff;
+	border-bottom: 1px solid #a3a3a3ff;
+	width: 100%;
+}
+.footer {
+	grid-area: footer;
+	padding-top: 35px;
+}
+.footer section {
+	margin-bottom: 35px;
+}
+/*adding padding*/
+.banner, .about, .favorites, .items {
+	padding-bottom: 45px;
+	padding-top: 5px;
+}
+/*styling fonts*/
+h1 {
+	letter-spacing: 4px;
+	padding-top: 20px;
+}
+h2, nav ul li, p, figcaption, #footer-links, #copyright, #made-in{
+	letter-spacing: 3px;
+	font-size: 12px;
+}
+h1, h2 {
+	font-weight: 400;
+}
+/*styling for the search and backet buttons*/
+#search-icon img, #basket-icon img {
+	width: 20px;
+	height: 20px;
+}
+#search-icon {
+	position: absolute;
+	left: 10px;
+	top: 40%;
+}
+#basket-icon {
+	position: absolute;
+	right: 10px;
+	top: 40%;
+}
+#search-icon, nav, #basket-icon {
+	display: inline-block;
+}
+nav ul li, #footer-links ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px;
+}
+/*styling for making boxes inline*/
+nav ul li, article, figure {
+	display: inline-block;
+}
+/*styling for links*/
+nav ul li a, #footer-links ul li a {
+	text-decoration: none;
+}
+nav ul li a, nav ul li a:visited {
+	color: #000000;
+}
+nav ul li a:hover, #footer-links ul li a:hover {
+	text-shadow: 0 15px 14px #000000;
+}
+/*styling for the different size of images*/
+.large-icon img, .large-icon {
+	width: 580px;
+	height: 600px;
+}
+.medium-icon article{
+	width: 380px;
+	height: 360px;
+}
+.small-icon img {
+	width: 280px;
+	height: 300px;
+	object-fit: cover;
+}
+/*styling for the image of the whitby range*/
+#whitby-range {
+	background-color: #9ab4b3ff;
+	position: relative;
+}
+#whitby-range-area {
+	position: absolute;
+	left: 0;
+  	top: 150px;
+  	width: 100%;
+}
+#whitby-range-area p {
+	color: #ffffff;
+}
+#whitby-range-text {
+	font-size: 50px;
+	letter-spacing: 20px;
+}
+#line {
+	width: 45px;
+	border-top: 1px solid #ffffff;
+	margin: auto;
+}
+/*styling the background of the boxes on the about section*/
+#making {
+	background-image: url(thomas-ae-602202-unsplash.jpg);
+	background-position: center;
+}
+#story{
+	background-image: url(beatriz-perez-moya-191993-unsplash.jpg);
+}
+#commissions {
+	background-image: url(tom-the-photographer-651516-unsplash.jpg);
+	background-position: center;
+}
+#making, #story, #commissions {
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+/*styling for the boxes on the about section*/
+.white-box {
+	width: 333px;
+	height: 119px;
+	background-color: #ffffff;
+	margin: auto;
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+	outline: 1px solid #aac0bfff;
+	outline-offset: -5px;
+}
+/*styling headings in the about section*/
+#making h1, #story h1, #commissions h1 {
+	color: #aac0bfff; /*blue*/
+}
+/*making the layout center*/
+html, h1, #making, #story, #commissions, nav ul, p, #footer-links ul, figcaption, footer {
+	text-align: center;
+}
+/*styling boxes*/
+figure, #making, #story, #commissions, article {
+	margin-right: 20px;
+}
+/*styling for figcaption*/
+figcaption {
+	padding-top: 10px;
+}
+/*styling for price*/
+del {
+	color: #656565ff;
+}
+ins {
+	text-decoration: none;
+	color: #a4c3e2ff;
+}
+.price {
+	color: #a9a9a9ff;
+}
+/*italic styling*/
+#made-in, #favorites p {
+	font-style: italic
+}
+/*styling for text*/
+h2, #favorites p, #footer-links, #footer-links ul li a:visited, #copyright {
+	color: #a3a3a3ff; /*grey*/
+}
+/*Styling for social media buttons*/
+.fa-facebook, .fa-twitter, .fa-instagram {
+  color: #9ab4b3ff;
+}
+.fa {
+  padding: 20px;
+  font-size: 15px;
+  width: 15px;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  border: 1px solid #a3a3a3ff;
+}
+.social-links{
+	margin-right: 30px;
+	display: inline-block;
+}
+/*This changes the layout of the website to screens with 768px or lower*/
+@media screen and (max-width: 768px) {
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"title title"
+	"navigation navigation"
+	"banner banner"
+	"about about"
+	"favorites favorites"
+	"items items"
+	"links links"
+	"footer footer";
+}
+/*Navigation bar goes vertically for users to select more comfortably*/
+nav ul li, #footer-links ul li {
+	display: block;
+	font-size: 18px;
+} 
+/*Bigger images and buttons*/
+#search-icon img, #basket-icon img {
+	width: 50px;
+	height: 50px;
+}
+.medium-icon article{
+	width: 580px;
+	height: 600px;
+}
+.small-icon img {
+	width: 580px;
+	height: 600px;
+}
+}
